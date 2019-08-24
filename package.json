@@ -1,0 +1,29 @@
+{
+  "name": "pact-tw-tt",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "fmt": "prettier --write */*.js */**/*.js package.json",
+    "consumer": "node consumer/index.js",
+    "provider": "node provider/index.js",
+    "test:consumer": "jest ./consumer"
+  },
+  "devDependencies": {
+    "@pact-foundation/pact": "^7.0.2",
+    "@pact-foundation/pact-node": "^6.20.0",
+    "cli-color": "^1.1.0",
+    "jest": "^24.9.0",
+    "nock": "^10.0.2"
+  },
+  "dependencies": {
+    "body-parser": "^1.16.1",
+    "cors": "^2.8.1",
+    "express": "^4.14.0",
+    "moment": "^2.18.1",
+    "superagent": "^3.3.2"
+  },
+  "jest": {
+    "verbose": true
+  }
+}

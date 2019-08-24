@@ -1,0 +1,47 @@
+I, [2019-08-24T18:43:49.682211 #71249]  INFO -- : Registered expected interaction GET /user/alice
+D, [2019-08-24T18:43:49.684279 #71249] DEBUG -- : {
+  "description": "a request for user JSON data",
+  "request": {
+    "method": "GET",
+    "path": "/user/alice"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "body": {
+      "user": {
+        "name": "alice"
+      }
+    }
+  }
+}
+I, [2019-08-24T18:43:49.692526 #71249]  INFO -- : Received request GET /user/alice
+D, [2019-08-24T18:43:49.693534 #71249] DEBUG -- : {
+  "path": "/user/alice",
+  "query": "",
+  "method": "get",
+  "headers": {
+    "Host": "localhost:8081",
+    "Accept-Encoding": "gzip, deflate",
+    "User-Agent": "node-superagent/3.8.3",
+    "Connection": "close",
+    "Version": "HTTP/1.1"
+  }
+}
+I, [2019-08-24T18:43:49.694228 #71249]  INFO -- : Found matching response for GET /user/alice
+D, [2019-08-24T18:43:49.694393 #71249] DEBUG -- : {
+  "status": 200,
+  "headers": {
+    "Content-Type": "application/json; charset=utf-8"
+  },
+  "body": {
+    "user": {
+      "name": "alice"
+    }
+  }
+}
+I, [2019-08-24T18:43:49.731886 #71249]  INFO -- : Verifying - interactions matched
+I, [2019-08-24T18:43:49.745888 #71249]  INFO -- : Cleared interactions
+I, [2019-08-24T18:43:49.764529 #71249]  INFO -- : Writing pact for Provider to /Users/wasinwatthanasrisong/Desktop/playground/pact/pact-tw-tt/pacts/consumer-provider.json

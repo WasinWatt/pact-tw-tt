@@ -8,7 +8,8 @@
     "consumer": "node consumer/index.js",
     "provider": "node provider/index.js",
     "test:consumer": "jest ./consumer",
-    "test:provider": "jest ./provider"
+    "test:provider": "jest ./provider",
+    "pact:publish": "node consumer/test/publish.js"
   },
   "devDependencies": {
     "@pact-foundation/pact": "^7.0.2",

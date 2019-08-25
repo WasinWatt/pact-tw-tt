@@ -13,7 +13,12 @@ describe('Pact Verification', () => {
     let opts = {
       provider: 'Provider',
       providerBaseUrl: 'http://localhost:8081',
-      pactUrls: [path.resolve(process.cwd(), './pacts/consumer-provider.json')]
+      pactBrokerUrl: 'http://localhost:9292',
+      pactBrokerUsername: 'username',
+      pactBrokerPassword: 'password',
+      tags: ['prod'],
+      publishVerificationResult: true,
+      providerVersion: '1.0.' + Math.floor(new Date() / 1000)
     }
 
     return new Verifier().verifyProvider(opts).then(output => {
